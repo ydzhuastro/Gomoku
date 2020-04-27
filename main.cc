@@ -1,4 +1,5 @@
-// GAMMAGO 2019 (c) Yongda ZHU
+// GPL v3
+// Yongda ZHU
 // zzyzvivy@gmail.com
 
 #include<iostream>
@@ -15,7 +16,7 @@ using namespace std;
 int MAINBOARD[BOARDSIZE][BOARDSIZE] = { 0 };	//主棋盘 0空 1黑 2白
 int WEIGBOARD[BOARDSIZE][BOARDSIZE] = { 1 };	//权重表 实时更新
 int vsperstep = 200000;
-double TM = 0;										//贴目数
+
 /* 用Schrage方法生成随机数*/
 double Schrage(double seed)
 {
@@ -162,10 +163,10 @@ int main()
 	int x, y;							//用户输入坐标
 
 	int inputflg = 1;					//输入是否合法
-	cout << "GammaGo 自动围棋程序" << endl;
-	cout << "2019 (c) ydzhuastro" << endl;
+	cout << "五子棋" << endl;
+	cout << "2020 ydzhuastro" << endl;
 
-	cout << "游戏模式\n（提示:游戏中可输入-2 -2放弃比赛。）\n你想作为黑棋(B)还是白棋(w):";
+	cout << "（提示:游戏中可输入-2 -2放弃比赛。）\n你想作为黑棋(B)还是白棋(w):";
 	cin >> UserChoice;
 
 	if (UserChoice == 'B' || UserChoice == 'b')
